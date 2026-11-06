@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+******************************************************************
+ * PROJECT      : KPI
+ * MODULE       : Page
+ * FILE         : penilai.html
+ * VERSION      : v1.0.0
+ * AUTHOR       : Sandri Irawan
+ * CREATED      : 2026-11-05
+ * LAST UPDATE  : 2026-11-05
+ *
+ * DESCRIPTION
+ * ================================================================
+ * Halaman Data Penilai (Admin).
+ ******************************************************************
+
+******************************************************************
+ * VERSION HISTORY
+ * ================================================================
+ *
+ * v1.0.0
+ * - Initial Release.
+ *
+ ******************************************************************
+
+******************************************************************
+ * DEPENDENCIES
+ * ================================================================
+ *
+ * Required
+ * - css/style.css
+ * - css/layout.css
+ * - css/responsive.css
+ * - css/print.css
+ * - js/config.js
+ * - js/auth.js
+ * - js/api.js
+ * - js/ui.js
+ * - js/penilai.js
+ *
+ * Used By
+ * - (dibuka langsung oleh pengguna)
+ *
+ ******************************************************************
+-->
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Data Penilai | KPI</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+  <div class="main">
+    <header class="topbar">
+      <button type="button" class="icon-btn menu-toggle" id="menuToggle" aria-label="Buka menu">&#9776;</button>
+      <h1 id="pageTitle">Data Penilai</h1>
+    </header>
+    <main class="content" id="content">
+      <section class="panel">
+        <div class="toolbar">
+          <input type="search" id="filterSearch" placeholder="Cari nama atau username..." aria-label="Cari penilai">
+          <select id="filterStatus" aria-label="Status">
+            <option value="">Semua status</option>
+            <option value="Aktif">Aktif</option>
+            <option value="Nonaktif">Nonaktif</option>
+          </select>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" id="btnAddEvaluator">+ Tambah Penilai</button>
+        </div>
+        <p class="muted small" id="evaluatorCount"></p>
+        <div id="evaluatorTable"></div>
+      </section>
+    </main>
+  </div>
+</div>
+<div id="toastHost" class="toast-host" aria-live="polite"></div>
+<div id="modalHost"></div>
+<div id="confirmHost"></div>
+<script src="js/config.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/penilai.js"></script>
+</body>
+</html>

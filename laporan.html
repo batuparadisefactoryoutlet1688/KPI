@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+******************************************************************
+ * PROJECT      : KPI
+ * MODULE       : Page
+ * FILE         : laporan.html
+ * VERSION      : v1.0.0
+ * AUTHOR       : Sandri Irawan
+ * CREATED      : 2026-11-05
+ * LAST UPDATE  : 2026-11-05
+ *
+ * DESCRIPTION
+ * ================================================================
+ * Halaman Laporan (Admin).
+ ******************************************************************
+
+******************************************************************
+ * VERSION HISTORY
+ * ================================================================
+ *
+ * v1.0.0
+ * - Initial Release.
+ *
+ ******************************************************************
+
+******************************************************************
+ * DEPENDENCIES
+ * ================================================================
+ *
+ * Required
+ * - css/style.css
+ * - css/layout.css
+ * - css/responsive.css
+ * - css/print.css
+ * - js/config.js
+ * - js/auth.js
+ * - js/api.js
+ * - js/ui.js
+ * - js/laporan.js
+ *
+ * Used By
+ * - (dibuka langsung oleh pengguna)
+ *
+ ******************************************************************
+-->
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Laporan | KPI</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+  <div class="main">
+    <header class="topbar">
+      <button type="button" class="icon-btn menu-toggle" id="menuToggle" aria-label="Buka menu">&#9776;</button>
+      <h1 id="pageTitle">Laporan</h1>
+    </header>
+    <main class="content" id="content">
+      <div class="print-only print-header" id="printHeader"></div>
+      <div class="toolbar">
+        <span class="spacer"></span>
+        <button type="button" class="btn" id="btnCsvReport">Unduh Excel</button>
+        <button type="button" class="btn btn-primary" id="btnPrintReport">Cetak / PDF</button>
+      </div>
+      <div id="reportBody"></div>
+    </main>
+  </div>
+</div>
+<div id="toastHost" class="toast-host" aria-live="polite"></div>
+<div id="modalHost"></div>
+<div id="confirmHost"></div>
+<script src="js/config.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/laporan.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+/******************************************************************
+ * PROJECT      : KPI
+ * MODULE       : CSS
+ * FILE         : print.css
+ * VERSION      : v1.0.0
+ * AUTHOR       : Sandri Irawan
+ * CREATED      : 2026-11-05
+ * LAST UPDATE  : 2026-11-05
+ *
+ * DESCRIPTION
+ * ----------------------------------------------------------------
+ * Tampilan saat dicetak atau disimpan sebagai PDF: menu dan tombol
+ * disembunyikan, kertas A4 landscape.
+ ******************************************************************/
+
+/******************************************************************
+ * VERSION HISTORY
+ * ----------------------------------------------------------------
+ *
+ * v1.0.0
+ * - Initial Release.
+ *
+ ******************************************************************/
+
+/******************************************************************
+ * DEPENDENCIES
+ * ----------------------------------------------------------------
+ *
+ * Required
+ * - style.css
+ *
+ * Used By
+ * - Semua halaman .html (media print)
+ *
+ ******************************************************************/
+
+/******************************************************************
+ * KERTAS
+ ******************************************************************/
+@page { size: A4 landscape; margin: 12mm; }
+
+/******************************************************************
+ * CETAK
+ ******************************************************************/
+body { background: #fff; color: #000; font-size: 10pt; }
+.sidebar, .topbar, .menu-backdrop, .no-print, .toast-host, .btn, .toolbar { display: none !important; }
+.shell, .main { display: block; }
+.content { max-width: none; padding: 0; }
+.print-only { display: block; }
+.print-header { margin-bottom: 8mm; font-size: 13pt; font-weight: 700; }
+.panel { padding: 0; border: 0; break-inside: auto; }
+.stats { border-color: #999; }
+.table-wrap { overflow: visible; border: 0; }
+.table { font-size: 9pt; }
+.table th, .table td { padding: 3px 6px; border-bottom: 1px solid #bbb; }
+.table th { color: #000; background: #eee; }
+.table tr { break-inside: avoid; }
+.badge { padding: 0; background: none !important; color: #000 !important; font-weight: 600; }
+a { color: #000; text-decoration: none; }
